@@ -1,15 +1,26 @@
-package Exercicios14;
+package Exercicios17;
 import java.util.Scanner;
 public class ParImpar {
-    public static void main (String[]args){
+    public static void main(String[]args){
         Scanner input = new Scanner(System.in);
-        System.out.println("Digite o número: ");
-        int num = input.nextInt();
-        if(num%2 == 0){
-            System.out.println(num+" é par");
+        
+        int i;
+        int num;
+        int par = 0;
+        int impar = 0;
+        
+        for(i = 1; i <= 10; i++){
+            System.out.println("Digite um número");
+            num = input.nextInt();
+            
+            if(num%2 == 0){
+                par++;
+            }
+            else{
+                impar++;
+            }
         }
-        else{
-            System.out.println(num+" é ímpar");
-        }
+        System.out.println("par = "+par);
+        System.out.println("ímpar = "+impar);
     }
 }
